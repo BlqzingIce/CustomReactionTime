@@ -13,9 +13,9 @@ If a map's base reaction time is in between `Lower Threshold` and `Upper Thresho
 Like `SetIfOutside`, but instead of changing the reaction time to `Reaction Time`, it changes it to the closest threshold. Ex: Map's RT is 812, your `Upper Threshold` is 600, the reaction time will be set to 600.
 
 ## How To Install
-- Simply download and place CustomReactionTime.dll in your Plugins folder!
+- Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
 - Requires BSIPA and BSML (most likely already installed lol)
-- Made for 1.21.0, may work with 1.20.x and future versions (not tested)
+- Currently made for 1.21.0, may work with 1.20.x and future versions (not tested)
 - **Not compatible with JDFixer or NjsFixer** (or anything else that messes with njs, jd, or rt)
 
 ## Config File
