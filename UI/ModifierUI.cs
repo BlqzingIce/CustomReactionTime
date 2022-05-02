@@ -10,28 +10,12 @@ namespace CustomReactionTime.Settings
 {
     public class ModifierUI : NotifiableSingleton<ModifierUI>
     {
-        //enable setting
-        [UIValue("enabled")]
-        private bool modEnabled
-        {
-            get => Configuration.PluginConfig.Instance.Enabled;
-            set
-            {
-                Configuration.PluginConfig.Instance.Enabled = value;
-            }
-        }
-        [UIAction("setEnabled")]
-        void SetEnabled(bool value)
-        {
-            modEnabled = value;
-        }
-
         //mode list setting
         [UIValue("modes")]
         public List<object> Modes = Enum.GetValues(typeof(Mode)).Cast<object>().ToList();
 
         [UIValue("mode_value")]
-        public Mode SelectedHeightUnit
+        public Mode Mode
         {
             get => Configuration.PluginConfig.Instance.Mode;
             set
@@ -108,6 +92,34 @@ namespace CustomReactionTime.Settings
         private void Set_Upper_Value(float value)
         {
             Upper_Value = value;
+        }
+
+        //lower threshold list setting
+        [UIValue("lowersettings")]
+        public List<object> LowerSettings = Enum.GetValues(typeof(Threshold)).Cast<object>().ToList();
+
+        [UIValue("lowersetting_value")]
+        public Threshold LowerSetting
+        {
+            get => Configuration.PluginConfig.Instance.LowerSetting;
+            set
+            {
+                Configuration.PluginConfig.Instance.LowerSetting = value;
+            }
+        }
+
+        //upper threshold list setting
+        [UIValue("uppersettings")]
+        public List<object> UpperSettings = Enum.GetValues(typeof(Threshold)).Cast<object>().ToList();
+
+        [UIValue("uppersetting_value")]
+        public Threshold UpperSetting
+        {
+            get => Configuration.PluginConfig.Instance.UpperSetting;
+            set
+            {
+                Configuration.PluginConfig.Instance.UpperSetting = value;
+            }
         }
     }
 }

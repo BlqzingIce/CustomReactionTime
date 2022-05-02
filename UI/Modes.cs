@@ -2,8 +2,14 @@
 {
 	public enum Mode
 	{
+		Disabled,
 		UseReactionTime,
-		SetIfOutside,
-		SetToThreshold
+		UseThresholds
+	}
+
+	public enum Threshold
+	{
+		ReactionTime,
+		Threshold
 	}
 }

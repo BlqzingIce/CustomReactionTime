@@ -1,7 +1,8 @@
-﻿<settings-container child-control-width='true' child-expand-width='true' size-delta-y='-15'>
-	<checkbox-setting value='enabled' on-change ='setEnabled' text='Enabled'/>
+﻿<settings-container child-control-width='true' child-expand-width='true' size-delta-y='0'>
 	<dropdown-list-setting text='Mode' value='mode_value' choices='modes' bind-value='true' apply-on-change='true'/>
 	<slider-setting id='rt_slider' value ='rt_value' show-buttons='true' on-change='set_rt_value' apply-on-change='true' bind-value='true' text='Reaction Time' increment='5' min='~min_slider' max='~max_slider' formatter='rt_slider_formatter'></slider-setting>
 	<slider-setting id='lower_slider' value ='lower_value' show-buttons='true' on-change='set_lower_value' apply-on-change='true' bind-value='true' text='Lower Threshold' increment='5' min='~min_slider' max='~max_slider' formatter='rt_slider_formatter'></slider-setting>
 	<slider-setting id='upper_slider' value ='upper_value' show-buttons='true' on-change='set_upper_value' apply-on-change='true' bind-value='true' text='Upper Threshold' increment='5' min='~min_slider' max='~max_slider' formatter='rt_slider_formatter'></slider-setting>
+	<dropdown-list-setting text='If below lower threshold, set to:' value='lowersetting_value' choices='lowersettings' bind-value='true' apply-on-change='true'/>
+	<dropdown-list-setting text='If above upper threshold, set to:' value='uppersetting_value' choices='uppersettings' bind-value='true' apply-on-change='true'/>
 </settings-container>

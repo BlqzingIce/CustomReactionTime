@@ -19,7 +19,6 @@ namespace CustomReactionTime
         {
             Instance = this;
             Log = logger;
-            Log.Debug("CustomReactionTime initialized.");
         }
 
 
@@ -27,14 +26,11 @@ namespace CustomReactionTime
         public void InitWithConfig(Config conf)
         {
             Configuration.PluginConfig.Instance = conf.Generated<Configuration.PluginConfig>();
-            Log.Debug("Config loaded");
         }
 
         [OnStart]
         public void OnApplicationStart()
         {
-            Log.Debug("OnApplicationStart");
-
             harmony = new Harmony("com.BlqzingIce.BeatSaber.CustomReactionTime");
             harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
 
@@ -44,7 +40,6 @@ namespace CustomReactionTime
         [OnExit]
         public void OnApplicationQuit()
         {
-            Log.Debug("OnApplicationQuit");
             harmony.UnpatchSelf();
         }
     }

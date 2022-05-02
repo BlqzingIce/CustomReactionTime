@@ -1,16 +1,25 @@
-﻿# CustomReactionTime
+# CustomReactionTime
 
 Like JDFixer, but worse! I made this cuz I couldn't figure out what a jump distance was.
 
-Set a consistent reaction time, or use thresholds for varied reaction times within your parameters.
+Set a consistent reaction time, or use thresholds to set it based on the map's original reaction time.
+
+### Important
+This mod is affected by the base game setting for offset. "Static" offsets will set the reaction time to the value you have selected before the mod acts on it, which is pointless as you can set the reaction time to a constant more precisely with this mod. Therefore it is recommended that you use the "Dynamic Default" offset setting. 
 
 ## Modes
-- **UseReactionTime**
-Changes every map to have the `Reaction Time` you set. Nice, simple, and consistent.
-- **SetIfOutside**
-If a map's base reaction time is in between `Lower Threshold` and `Upper Threshold`, it's reaction time is left unchanged. But if the reaction time goes above or below these thresholds, it is set to your `Reaction Time` instead.
-- **SetToThreshold**
-Like `SetIfOutside`, but instead of changing the reaction time to `Reaction Time`, it changes it to the closest threshold. Ex: Map's RT is 812, your `Upper Threshold` is 600, the reaction time will be set to 600.
+- **Disabled**  
+The mod will not change anything when playing.
+
+- **UseReactionTime**  
+Changes every map to have the `ReactionTime` you set. Nice, simple, and consistent.
+
+- **UseThresholds**  
+If a map's base reaction time is below your `LowerThreshold` or above your `UpperThreshold`, it's reaction time is changed based on the setting you have selected for that threshold.
+
+**Threshold Settings**  
+`ReactionTime` - Will set the reaction time to your selected `ReactionTime`.  
+`Threshold` - Will set the reaction time to the threshold it went past.
 
 ## How To Install
 - Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
@@ -20,11 +29,11 @@ Like `SetIfOutside`, but instead of changing the reaction time to `Reaction Time
 
 ## Config File
 - The config file can be found at Beat Saber/UserData/CustomReactionTime.json
-- `Enabled`: Whether or not the mod should change reaction times
-- `Mode`: 0 = UseReactionTime, 1 = SetIfOutside, 2 = SetToThreshold
+- `Mode`: 0 = Disabled, 1 = UseReactionTime, 2 = UseThresholds
 - `ReactionTime`, `LowerThreshold`, and`UpperThreshold`: Exactly what they sound like, all in milliseconds.
+- `LowerSetting` and `UpperSetting`: Corresponding threshold settings, 0 = ReactionTime, 1 = Threshold
 - `SliderMin` and `SliderMax`: Secret settings that control how much range the slider settings have, also in ms.
-- **It is highly recommended that you both: keep minimums above their maximums, and the settings measured in ms to increments of 5. Not doing so could cause unexpected things to happen.**
+- **It is highly recommended that you both: keep minimums below their associated maximums, and keep the settings measured in ms to increments of 5. Not doing so could cause unexpected things to happen.**
 -  Also note that extreme values could cause things to function improperly. Please keep your values reasonable, and out of the negatives.
 
 ## Credits
