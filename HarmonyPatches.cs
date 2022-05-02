@@ -66,7 +66,7 @@ namespace CustomReactionTime.HarmonyPatches
                                 break;
 
                             default:
-                                Plugin.Log.Error("How did you manage to break your lower theshold setting??");
+                                Plugin.Log.Error("How did you manage to break your upper theshold setting??");
                                 break;
                         }
                     }
