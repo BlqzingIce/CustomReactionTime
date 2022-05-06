@@ -24,7 +24,7 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 ## How To Install
 - Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
 - Requires BSIPA and BSML (most likely already installed lol)
-- Currently made for 1.21.0, may work with 1.20.x and future versions (not tested)
+- Made for 1.21.0, works on 1.22.0 and may work with 1.20.0 (not tested)
 - **Not compatible with JDFixer or NjsFixer** (or anything else that messes with njs, jd, or rt)
 
 ## Config File
