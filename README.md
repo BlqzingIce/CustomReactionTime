@@ -21,6 +21,10 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 `ReactionTime` - Will set the reaction time to your selected `ReactionTime`.  
 `Threshold` - Will set the reaction time to the threshold it went past.
 
+**Minimum Jump Distance Settings**  
+`Use Minimum Jump Distance` - If the jump distance set by the map or this mod is below the value set for `Minimum Jump Distance`, it will raise the jump distance to `Minimum Jump Distance`.  
+`Minimum Jump Distance` - Minimum jump distance value, in meters.
+
 ## How To Install
 - Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
 - Requires BSIPA and BSML (most likely already installed lol)
