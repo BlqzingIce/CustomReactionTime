@@ -5,4 +5,6 @@
 	<slider-setting id='upper_slider' value ='upper_value' show-buttons='true' on-change='set_upper_value' apply-on-change='true' bind-value='true' text='Upper Threshold' increment='5' min='~min_slider' max='~max_slider' formatter='rt_slider_formatter'></slider-setting>
 	<dropdown-list-setting text='If below lower threshold, set to:' value='lowersetting_value' choices='lowersettings' bind-value='true' apply-on-change='true'/>
 	<dropdown-list-setting text='If above upper threshold, set to:' value='uppersetting_value' choices='uppersettings' bind-value='true' apply-on-change='true'/>
+	<checkbox-setting text='Use Minimum Jump Distance' value='min_jd_enabled' apply-on-change='true' hover-hint='Regardless of the mode set, if the jump distance is below the minimum it gets set to the minimum' />
+	<slider-setting id='jd_slider' value ='jd_value' show-buttons='true' on-change='set_jd_value' apply-on-change='true' bind-value='true' text='Minimum Jump Distance' increment='1' min='0' max='20' formatter='jd_slider_formatter'></slider-setting>
 </settings-container>

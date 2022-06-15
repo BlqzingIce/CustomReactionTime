@@ -17,5 +17,7 @@ namespace CustomReactionTime.Configuration
         public virtual Threshold UpperSetting { get; set; } = Threshold.ReactionTime;
         public virtual float SliderMin { get; set; } = 300;
         public virtual float SliderMax { get; set; } = 1000;
+        public virtual bool MinJDEnabled { get; set; } = true;
+        public virtual float MinimumJumpDistance { get; set; } = 5;
     }
 }

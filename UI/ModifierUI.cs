@@ -121,5 +121,39 @@ namespace CustomReactionTime.Settings
                 Configuration.PluginConfig.Instance.UpperSetting = value;
             }
         }
+
+        //min jd toggle setting
+        [UIValue("min_jd_enabled")]
+        public bool Min_JD_Enabled
+        {
+            get => Configuration.PluginConfig.Instance.MinJDEnabled;
+            set
+            {
+                Configuration.PluginConfig.Instance.MinJDEnabled = value;
+            }
+        }
+
+        //jd slider setting
+        [UIAction("jd_slider_formatter")]
+        private string jd_Slider_Formatter(float value) => value.ToString() + " m";
+
+        [UIComponent("jd_slider")]
+        private SliderSetting JD_Slider;
+
+        [UIValue("jd_value")]
+        private float JD_Value
+        {
+            get => Configuration.PluginConfig.Instance.MinimumJumpDistance;
+            set
+            {
+                Configuration.PluginConfig.Instance.MinimumJumpDistance = value;
+            }
+        }
+
+        [UIAction("set_jd_value")]
+        private void Set_JD_Value(float value)
+        {
+            JD_Value = value;
+        }
     }
 }

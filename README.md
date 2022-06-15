@@ -24,7 +24,7 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 ## How To Install
 - Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
 - Requires BSIPA and BSML (most likely already installed lol)
-- Made for 1.21.0, works on 1.22.0 and may work with 1.20.0 (not tested)
+- Currently made for 1.21.0, may work with 1.20.x and future versions (not tested)
 - **Not compatible with JDFixer or NjsFixer** (or anything else that messes with njs, jd, or rt)
 
 ## Config File
@@ -33,6 +33,7 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 - `ReactionTime`, `LowerThreshold`, and`UpperThreshold`: Exactly what they sound like, all in milliseconds.
 - `LowerSetting` and `UpperSetting`: Corresponding threshold settings, 0 = ReactionTime, 1 = Threshold
 - `SliderMin` and `SliderMax`: Secret settings that control how much range the slider settings have, also in ms.
+- `MinJDEnabled` and `MinimumJumpDistance`: Self explanatory.
 - **It is highly recommended that you both: keep minimums below their associated maximums, and keep the settings measured in ms to increments of 5. Not doing so could cause unexpected things to happen.**
 -  Also note that extreme values could cause things to function improperly. Please keep your values reasonable, and out of the negatives.
 

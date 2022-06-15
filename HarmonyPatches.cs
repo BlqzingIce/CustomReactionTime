@@ -82,6 +82,34 @@ namespace CustomReactionTime.HarmonyPatches
                     Plugin.Log.Error("How did you manage to break your mode setting??");
                     break;
             }
+
+            if (Configuration.PluginConfig.Instance.MinJDEnabled)
+            {
+                if (ReactionTimeUtils.CalculateJumpDistance(noteJumpValueType, noteJumpValue, startNoteJumpMovementSpeed, startBpm) < Configuration.PluginConfig.Instance.MinimumJumpDistance)
+                {
+                    noteJumpValueType = BeatmapObjectSpawnMovementData.NoteJumpValueType.BeatOffset;
+
+                    //shamelessly stolen from jdfixer
+                    float numCurr = 60f / startBpm;
+                    float num2Curr = 4f;
+
+                    while (startNoteJumpMovementSpeed * numCurr * num2Curr > 17.999)
+                        num2Curr /= 2f;
+
+                    if (num2Curr < 0.25f)
+                        num2Curr = 0.25f;
+
+                    float jumpDurCurr = num2Curr * numCurr * 2f;
+                    float jumpDisCurr = startNoteJumpMovementSpeed * jumpDurCurr;
+
+                    float desiredJumpDur = Configuration.PluginConfig.Instance.MinimumJumpDistance / startNoteJumpMovementSpeed;
+                    float desiredHalfJumpDur = desiredJumpDur / 2f / num2Curr;
+                    float jumpDurMul = desiredJumpDur / jumpDurCurr;
+
+                    noteJumpValue = (num2Curr * jumpDurMul) - num2Curr;
+                    Plugin.Log.Info("Jump Distance raised to: " + ReactionTimeUtils.CalculateJumpDistance(noteJumpValueType, noteJumpValue, startNoteJumpMovementSpeed, startBpm).ToString() + " m");
+                }
+            }
         }
     }
 }
