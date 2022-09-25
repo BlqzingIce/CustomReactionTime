@@ -3,9 +3,9 @@
   "id": "CustomReactionTime",
   "name": "CustomReactionTime",
   "author": "",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "description": "",
-  "gameVersion": "1.21.0",
+  "gameVersion": "1.24.1",
   "dependsOn": {
     "BeatSaberMarkupLanguage": "^1.5.3",
     "BSIPA": "^4.2.0"

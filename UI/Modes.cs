@@ -10,6 +10,7 @@
 	public enum Threshold
 	{
 		ReactionTime,
-		Threshold
+		Threshold,
+		None
 	}
 }

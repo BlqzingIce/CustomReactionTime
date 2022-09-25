@@ -48,6 +48,9 @@ namespace CustomReactionTime.HarmonyPatches
                                 reactionTime = Configuration.PluginConfig.Instance.LowerThreshold;
                                 break;
 
+                            case Threshold.None:
+                                break;
+
                             default:
                                 Plugin.Log.Error("How did you manage to break your lower theshold setting??");
                                 break;
@@ -63,6 +66,9 @@ namespace CustomReactionTime.HarmonyPatches
 
                             case Threshold.Threshold:
                                 reactionTime = Configuration.PluginConfig.Instance.UpperThreshold;
+                                break;
+
+                            case Threshold.None:
                                 break;
 
                             default:

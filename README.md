@@ -19,7 +19,8 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 
 **Threshold Settings**  
 `ReactionTime` - Will set the reaction time to your selected `ReactionTime`.  
-`Threshold` - Will set the reaction time to the threshold it went past.
+`Threshold` - Will set the reaction time to the threshold it went past.  
+`None` - Will not change the reaction time.
 
 **Minimum Jump Distance Settings**  
 `Use Minimum Jump Distance` - If the jump distance set by the map or this mod is below the value set for `Minimum Jump Distance`, it will raise the jump distance to `Minimum Jump Distance`.  
@@ -28,14 +29,14 @@ If a map's base reaction time is below your `LowerThreshold` or above your `Uppe
 ## How To Install
 - Simply download CustomReactionTime.dll from [releases](https://github.com/BlqzingIce/CustomReactionTime/releases) and put it in your Plugins folder!
 - Requires BSIPA and BSML (most likely already installed lol)
-- Currently made for 1.21.0, may work with 1.20.x and future versions (not tested)
+- Currently made for 1.24.1, will work with on 1.21.0+
 - **Not compatible with JDFixer or NjsFixer** (or anything else that messes with njs, jd, or rt)
 
 ## Config File
 - The config file can be found at Beat Saber/UserData/CustomReactionTime.json
 - `Mode`: 0 = Disabled, 1 = UseReactionTime, 2 = UseThresholds
 - `ReactionTime`, `LowerThreshold`, and`UpperThreshold`: Exactly what they sound like, all in milliseconds.
-- `LowerSetting` and `UpperSetting`: Corresponding threshold settings, 0 = ReactionTime, 1 = Threshold
+- `LowerSetting` and `UpperSetting`: Corresponding threshold settings, 0 = ReactionTime, 1 = Threshold, 2 = None
 - `SliderMin` and `SliderMax`: Secret settings that control how much range the slider settings have, also in ms.
 - `MinJDEnabled` and `MinimumJumpDistance`: Self explanatory.
 - **It is highly recommended that you both: keep minimums below their associated maximums, and keep the settings measured in ms to increments of 5. Not doing so could cause unexpected things to happen.**
